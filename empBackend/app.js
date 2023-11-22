@@ -9,7 +9,14 @@ const loginRoute = require('./routes/login')
 
 
 
-app.use(cors());
+app.use(cors(
+
+  {origin:[""],
+methods:["POST","GET"],
+credentials:true
+
+}
+));
 app.use('/emp',empRoute)
 app.use('/login',loginRoute)
 
