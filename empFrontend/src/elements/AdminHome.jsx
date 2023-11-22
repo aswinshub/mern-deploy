@@ -25,14 +25,14 @@ const AdminHome = () => {
   const [data, setData] = useState([]);
   useEffect(() => {
     axiosInstance
-      .get("http://localhost:4002/emp/")
+      .get("mern-deploy-api-silk.vercel.app/emp/")
       .then((res) => setData(res.data))
       .catch((err) => console.log(err));
   }, []);
 
   function removeBlog(id) {
     axiosInstance
-      .delete("http://localhost:4002/emp/remove/" + id)
+      .delete("mern-deploy-api-silk.vercel.app/emp/remove/" + id)
       .then((res) => {
         alert(res.data);
         window.location.reload(false);
