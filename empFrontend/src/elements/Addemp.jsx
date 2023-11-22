@@ -18,7 +18,7 @@ const Addemp = (props) => {
   const navigate = useNavigate();
   function submitform(){
     if(props.method==="put"){
-      axiosInstance.put("http://localhost:4002/emp/edit/"+props.data._id,form)
+      axiosInstance.put("mern-deploy-api-silk.vercel.app/emp/edit/"+props.data._id,form)
       .then((response)=>{
        
         if (response.data==="Updated successfully") {
@@ -31,7 +31,7 @@ const Addemp = (props) => {
         }
       })}
       else{
-      axiosInstance.post('http://localhost:4002/emp/add',form).then((res)=>{
+      axiosInstance.post('mern-deploy-api-silk.vercel.app/emp/add',form).then((res)=>{
         alert(res.data);
      
       })}
@@ -47,7 +47,7 @@ function cancel(){
 
 
   // function submitForm() {
-  //   axios.post("http://localhost:4002/emp/add", form).then((res) => {
+  //   axios.post("mern-deploy-api-silk.vercel.app/emp/add", form).then((res) => {
   //     alert(res.data);
 
   //     navigate("/admin");
