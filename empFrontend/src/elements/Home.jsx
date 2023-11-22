@@ -9,7 +9,7 @@ const Home = () => {
   const [data, setData] = useState([]);
   useEffect(() => {
     axiosInstance
-      .get("http://localhost:4002/emp/")
+      .get("mern-deploy-api-silk.vercel.app/emp/")
       .then((res) => setData(res.data))
       .catch((err) => console.log(err));
   }, []);
