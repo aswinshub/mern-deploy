@@ -11,7 +11,7 @@ const loginRoute = require('./routes/login')
 
 app.use(cors(
 
-  {origin:[""],
+  {origin:["https://mern-deploy-api-silk.vercel.app/"],
 methods:["POST","GET"],
 credentials:true
 
